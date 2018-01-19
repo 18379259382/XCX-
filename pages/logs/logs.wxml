@@ -1,0 +1,17 @@
+<!--register.wxml-->
+<view class="content">
+    <form bindsubmit="formSubmit">
+        <view class="input-area">
+          <input id="username" name="username" maxlength='11' type="text" placeholder="手机号" bindchange="getPhoneNum"/>
+          <view class="smsCode">
+            <input id="smsCode" name="smsCode" maxlength='6' type="text" placeholder="测试验证码 000000" />
+            <button bindtap = "getSmsCode" disabled="{{smsCodeDisabled}}" style="background-color:{{getSmsCodeBtnColor}}"   class="getSmsCodeBtn">{{getSmsCodeBtnTxt}}</button>
+          </view>
+          <input id="name" name="name" maxlength='20' type="text" placeholder="姓名" />
+        </view>
+        <view class="btn-area">
+            <button  disabled="{{registDisabled}}" style="background-color:{{registBtnBgBgColor}}"   formType="submit"  loading="{{btnLoading}}"> {{registBtnTxt}} </button>
+
+        </view>
+    </form>
+</view>
